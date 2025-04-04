@@ -20,6 +20,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+24.	urlpatterns = [
+25.	    path('admin/', admin.site.urls),
+26.	    path('', include('shop.urls')),
+27.	] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
